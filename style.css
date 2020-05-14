@@ -5,28 +5,39 @@ body {
 }
 
 
+
+
 header {
-    position: fixed;
-    width: 100%;
     height: 90px;
     border-bottom: 1px solid gray;
     z-index: 999;
     background-color: #ffffff;
+    width: 100%;
+    position: fixed;
+    top: 0;
 }
+
+header #main-header {
+    max-width: 1004px;
+    margin: 0 auto;
+}
+
 
 #header #logo-wrap {
     float: left;
     height: 90px;
     padding: 20px 0;
+    width: auto;
 }
 
 #header #logo-wrap img {
     display: inline;
-    clear: none;
 }
 
 #header #logo-wrap h3 {
     display: inline;
+    height: 90px;
+    padding: 20px 5px;
 }
 
 #header #nav-bar {
@@ -50,22 +61,133 @@ header {
 }
 
 
+#main {
+    max-width: 1004px;
+    width: 100%;
+    margin: 0 auto;
+}
+
 
 /* Hearo Section */
 #hero {
-    height: 30vh;
-    text-align: left;
+    margin: 200 auto;
+    margin-top: 200px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+#hero #hero-content {
+
+    
+}
+
+#hero #heor-img {
 }
 
 #hero h1 {
     font-size: 38px;
     font-weight: 400;
     margin-bottom: 40px;
+    
 }
 
+#features {
+    width: 80%;
+}
+
+#features .feature {
+    display: flex;
+    padding: 20px 10px;
+}
+
+#features .feature img {
+    width: 60px;
+    height: 60px;
+    margin-right: 60px;
+    padding-top: 20px;
+}
+
+#features .feature .feature-content {
+    height: 60px;
+}
+
+
 section {
-    width: 90%;
     margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+#video {
+    width: 100%;
+}
+
+#form input[type="email"] {
+    width: 220px;
+    height: 32px;
+    font-size: 17px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding: 5px 10px;
+}
+
+#pricing {
+    width: 100%;
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+#pricing .price-card {
+
+    width: 300px;
+    height: 440px;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    text-align: center;
+    margin-top: 40px;
+
+}
+
+#pricing .card-head {
+    height: 110px;
+    border-bottom: 1px solid gray;
+    padding: 30px 0;
+}
+
+#pricing .card-head h4 {
+    font-weight: 400;
+}
+
+#pricing .card-head span {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+
+#pricing .price-card ul {
+    font-size: 17px;
+    margin-bottom: 40px;
+    padding: 0;
+    list-style-type: none;
+}
+
+#pricing .price-card ul li {
+    margin-bottom: 16px;
+}
+
+
+.btn {
+    padding: 12px 22px;
+    font-size: 17px;
+    border-radius: 5px;
+    font-weight: 600;
+    background-color: #F58220;
+    color: #ffffff;
+    border: none;
+    text-transform: uppercase;
 }
 
 
@@ -79,11 +201,47 @@ footer {
     height: 100px;
     background-color: #F7F7F7;
     padding: 40px 0;
+    margin-top: 40px;
 }
 
 footer ul {
-    list-style: none;
+
+    width: 50%;
+    list-style-type: none;
+    padding: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    margin: 0 auto;
+    margin-bottom: 40px;
 }
+
+
+
+
+/* Media Queries */
+
+@media (max-width: 760px) {
+    #header #logo-wrap img {
+        width: 30px;
+    }
+
+    #header #logo-wrap h3 {
+        font-size: 17px;
+    }
+    #nav-bar .nav-link {
+        font-size: 15px;
+    }
+
+    #pricing {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #features {
+        width: 95%;
+    }
+}
+
+
